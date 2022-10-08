@@ -21,7 +21,7 @@ export async function createUser(req, res) {
             console.log("Username and/or Password are missing!")
             return res.status(STATUS_CODE_BAD_REQUEST).json({message: 'Username and/or Password are missing!'});
         } else if (userExists) {
-            console.log("Usernmae exists. Cannot create account")
+            console.log("Username exists. Cannot create account")
             return res.status(STATUS_CODE_BAD_REQUEST).json({message: 'Username is already used!'})
         } else {
             return res.status(STATUS_CODE_BAD_REQUEST).json({message: 'System failed to create new user!'})

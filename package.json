@@ -5,7 +5,12 @@
   },
   "scripts": {
     "prepare": "husky install",
+<<<<<<< HEAD
     "setup": "npm install --prefix frontend && npm install --prefix matching-service && npm install --prefix user-service && npm install --prefix collaboration-service",
     "test": "npm test --prefix matching-service"
+=======
+    "setup": "npm install --prefix frontend && npm install --prefix matching-service && npm install --prefix user-service",
+    "test": "npm test --prefix matching-service && npm test --prefix user-service"
+>>>>>>> 9dc2a911941fe97fe5b9e3b9c10946357b93ee22
   }
 }
