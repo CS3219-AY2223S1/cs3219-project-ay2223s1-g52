@@ -83,7 +83,7 @@ describe('Login and Auth', function() {
       .post(`${PREFIX_USER_SVC}/`)
       .send(dummyData[2])
       .end((err, res) => {
-        done()
+      done()
       })
     });
 
