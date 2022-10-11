@@ -5,7 +5,7 @@ name: User Service CI
 
 on:
   pull_request:
-    branches: ['main']
+    branches: ['user-service-testing']
   
 jobs:
   user-service-job:
