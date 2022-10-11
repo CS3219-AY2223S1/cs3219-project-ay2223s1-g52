@@ -23,13 +23,13 @@ const assert = chai.assert;
 chai.use(chaiHttp)
 chai.should()
 
-before(async () => {
+before(async function () {
   await UserModel.deleteMany();
 })
 
 describe("createUser", () => {
   let userId = null;
-
+  
   it ('should create a new user successfully', (done) => {
     chai.request(app)
       .post(`${PREFIX_USER_SVC}/`)

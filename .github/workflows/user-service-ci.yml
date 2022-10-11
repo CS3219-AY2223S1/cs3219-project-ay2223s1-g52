@@ -13,7 +13,7 @@ jobs:
 
     env:
       MONGO_URI: ${{ secrets.MONGO_URI }}
-      NODE_ENV: 'PROD'
+      NODE_ENV: 'development'
 
     defaults:
       run:
