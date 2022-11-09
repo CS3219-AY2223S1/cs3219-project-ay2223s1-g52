@@ -4,7 +4,9 @@ import 'dotenv/config'
 //Set up mongoose connection
 import mongoose from 'mongoose';
 
-let mongoDB = process.env.ENV == "PROD" ? process.env.DB_CLOUD_URI : process.env.DB_LOCAL_URI;
+let mongoDB = process.env.ENV == "TEST" 
+  ? process.env.DB_TEST_URI : "PROD" 
+    ? process.env.DB_CLOUD_URI : process.env.DB_LOCAL_URI;
 
 mongoose.connect(mongoDB, { useNewUrlParser: true , useUnifiedTopology: true});
 
@@ -15,3 +17,18 @@ export async function createUser(params) {
   return new UserModel(params)
 }
 
+export async function userExists(params) {
+  return UserModel.exists(params)
+}
+
+export async function updatePassword(_id, password) {
+  return UserModel.findByIdAndUpdate(_id , { password });
+}
+
+export async function deleteUser(_id) {
+  return UserModel.findByIdAndDelete(_id)
+}
+ 
+export async function getUser(params) {
+  return UserModel.findOne(params)
+}

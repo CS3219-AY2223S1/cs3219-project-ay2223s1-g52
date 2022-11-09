@@ -2,26 +2,42 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "16"
+  },
   "dependencies": {
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
+    "@mui/icons-material": "^5.10.2",
+    "@mui/lab": "^5.0.0-alpha.96",
     "@mui/material": "^5.9.1",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "@uiw/react-codemirror": "^4.12.3",
     "axios": "^0.27.2",
+    "codemirror": "^6.0.1",
+    "date-fns": "^2.29.3",
+    "dompurify": "^2.4.0",
+    "dotenv": "^16.0.2",
     "react": "^18.2.0",
+    "react-cookie": "^4.1.1",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.3.0",
-    "react-scripts": "5.0.1",
-    "socket.io-client": "^4.5.1",
+    "react-scripts": "^5.0.1",
+    "react-split": "^2.0.14",
+    "socket.io-client": "^4.5.2",
+    "source-map-explorer": "^2.5.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "lint": "npx eslint ."
+    "lint": "npx eslint .",
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
+    "prettier:check": "prettier \"src/**/*.{js,jsx,css}\"",
+    "prettier:fix": "prettier --write \"src/**/*.{js,jsx}\""
   },
   "eslintConfig": {
     "extends": [
@@ -42,7 +58,10 @@
     ]
   },
   "devDependencies": {
+    "enzyme": "^3.11.0",
     "eslint": "^8.21.0",
-    "eslint-plugin-react": "^7.30.1"
+    "eslint-plugin-react": "^7.30.1",
+    "prettier": "^2.7.1",
+    "react-test-renderer": "^18.2.0"
   }
 }

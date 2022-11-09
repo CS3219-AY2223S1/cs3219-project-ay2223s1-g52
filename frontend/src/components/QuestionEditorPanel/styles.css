@@ -1,0 +1,15 @@
+.gutter {
+    background-color: #eee;
+
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+.gutter.gutter-horizontal {
+    background-image: url('vertical.png');
+    cursor: col-resize;
+}
+
+.gutter:hover {
+    background-color: #999;
+}

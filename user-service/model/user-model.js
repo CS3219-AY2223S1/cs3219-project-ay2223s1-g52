@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
 var Schema = mongoose.Schema
+
 let UserModelSchema = new Schema({
     username: {
         type: String,

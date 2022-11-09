@@ -1,0 +1,17 @@
+{
+  "engines": {
+    "node": "16"
+  },
+  "devDependencies": {
+    "husky": "^8.0.0",
+    "husky-init": "^8.0.0"
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "setup": "npm install --prefix frontend && npm install --prefix matching-service && npm install --prefix user-service && npm install --prefix collaboration-service && npm install --prefix question-service && npm install --prefix communication-service && npm install --prefix history-service",
+    "test": "npm test --prefix matching-service && npm test --prefix user-service"
+  },
+  "dependencies": {
+    "stack": "^0.1.0"
+  }
+}

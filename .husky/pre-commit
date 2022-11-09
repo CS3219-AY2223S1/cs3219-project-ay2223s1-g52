@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+printf "Running pre commit hook\n"
+cd frontend && npm run lint --fix && npm run prettier:fix && git add .
+printf "\nNote: Please fix lint warnings/error in the frontend if any, and check if there are any uncommited files. If so, commit the changes again\n"
